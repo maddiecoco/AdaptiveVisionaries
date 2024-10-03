@@ -36,3 +36,30 @@
     transform: rotate(360deg);
   }
 }
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.button-container {
+  display: flex;
+  width: 100%;
+}
+
+.my-button {
+  flex: 1; /* Each button takes equal width */
+  padding: 15px;
+  border: 1px solid #ccc;
+  background-color: #007bff; /* Example background color */
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.my-button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
