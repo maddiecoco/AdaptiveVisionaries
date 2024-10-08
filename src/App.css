@@ -53,8 +53,8 @@ body {
 .my-button {
   flex: 1; /* Each button takes equal width */
   padding: 15px;
-  border: 1px solid #ccc;
-  background-color: #007bff; /* Example background color */
+  border: 1px solid #007bff;
+  background-color: #ccc; /* Example background color */
   color: white;
   font-size: 16px;
   cursor: pointer;

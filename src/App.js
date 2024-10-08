@@ -1,11 +1,11 @@
 import './App.css';
 import React, { useState } from 'react';
-import { createRoot } from "react-dom/client";
+// import { createRoot } from "react-dom/client";
 
-import BlogPost from "./BlogPost";
+// import BlogPost from "./BlogPost";
 
-const rootElement = document.getElementById("root");
-const root = createRoot(rootElement);
+// const rootElement = document.getElementById("root");
+// const root = createRoot(rootElement);
 
 function MyButton() {
   const [inputValue, setInputValue] = useState('');
