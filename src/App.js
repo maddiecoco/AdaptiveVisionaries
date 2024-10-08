@@ -1,11 +1,41 @@
 import './App.css';
+import React, { useState } from 'react';
+import { createRoot } from "react-dom/client";
+
+import BlogPost from "./BlogPost";
+
+const rootElement = document.getElementById("root");
+const root = createRoot(rootElement);
 
 function MyButton() {
+  const [inputValue, setInputValue] = useState('');
+
+  const handleButtonClick = (char) => {
+    setInputValue((prev) => prev + char); // Append the clicked letter to the input value
+  };
+
+  // Create an array of letters A-Z
+  const alphabet = Array.from({ length: 26 }, (_, index) => String.fromCharCode(65 + index));
+
   return (
-    <div className="button-container">
-      {Array.from({ length: 10 }, (_, index) => (
-        <button key={index} className="my-button">Button {index + 1}</button>
-      ))}
+    <div>
+      <input
+        type="text"
+        value={inputValue}
+        readOnly // Prevent user from typing manually
+        placeholder="Type here..."
+      />
+      <div className="button-container">
+        {alphabet.map((char, index) => (
+          <button
+            key={index}
+            className="my-button"
+            onClick={() => handleButtonClick(char)}
+          >
+            {char}
+          </button>
+        ))}
+      </div>
     </div>
   );
 }
