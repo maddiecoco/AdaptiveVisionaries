@@ -20,26 +20,22 @@ const TextToSpeech = ({ text }) => {
 
     if (isPaused) {
       synth.resume();
+    } else {
+      synth.speak(utterance);
     }
 
-    synth.speak(utterance);
-
-    setIsPaused(true);
+    setIsPaused(false);
   };
 
   const handlePause = () => {
     const synth = window.speechSynthesis;
-
     synth.pause();
-
     setIsPaused(true);
   };
 
   const handleStop = () => {
     const synth = window.speechSynthesis;
-
     synth.cancel();
-
     setIsPaused(false);
   };
 
