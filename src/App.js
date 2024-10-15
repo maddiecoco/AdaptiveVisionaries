@@ -1,13 +1,15 @@
 import './App.css';
 import React, { useState } from 'react';
 import MyButton from './components/Button/MyButton'; // Import MyButton
+import TextToSpeech from './components/TextToSpeech';
 
 function App() {
   const [inputValue, setInputValue] = useState('');
 
   return (
     <div>
-      <MyButton inputValue={inputValue} setInputValue={setInputValue} /> {/* Pass props */}
+      <MyButton inputValue={inputValue} setInputValue={setInputValue} /> {/* Pass props */} 
+      <TextToSpeech text={inputValue} /> 
     </div>
   );
 }
