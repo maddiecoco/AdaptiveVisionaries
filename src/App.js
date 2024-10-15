@@ -1,6 +1,6 @@
 import './App.css';
 import React, { useState } from 'react';
-import MyButton from './components/MyButton'; 
+import MyButton from './components/Button/MyButton'; // Import MyButton
 import TextToSpeech from './components/TextToSpeech';
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
 
   return (
     <div>
-      <MyButton inputValue={inputValue} setInputValue={setInputValue} /> 
+      <MyButton inputValue={inputValue} setInputValue={setInputValue} /> {/* Pass props */} 
       <TextToSpeech text={inputValue} /> 
     </div>
   );
