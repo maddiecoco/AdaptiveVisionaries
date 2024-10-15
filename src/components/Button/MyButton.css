@@ -3,8 +3,8 @@
     grid-template-columns: repeat(10, 1fr); /* 10 buttons per row */
     gap: 10px; /* Space between buttons */
     padding: 10px; /* Padding around the button container */
-    margin-left: 2%;
-    margin-right: 2%;
+    margin-left: 10%;
+    margin-right: 10%;
   }
   
   .my-button {
