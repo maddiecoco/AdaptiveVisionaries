@@ -1,16 +1,29 @@
 import './App.css';
 import React, { useState } from 'react';
-import MyButton from './components/Button/MyButton'; // Import MyButton
+import { Routes, Route } from 'react-router-dom';
+import MyButton from './components/Button/MyButton';
 import TextToSpeech from './components/TextToSpeech';
+import Temporary from './components/Temporary';
 
 function App() {
   const [inputValue, setInputValue] = useState('');
 
   return (
-    <div>
-      <MyButton inputValue={inputValue} setInputValue={setInputValue} /> {/* Pass props */} 
-      <TextToSpeech text={inputValue} /> 
-    </div>
+    <Routes>
+      <Route 
+        path="/" 
+        element={
+          <>
+            <MyButton inputValue={inputValue} setInputValue={setInputValue} />
+            <TextToSpeech text={inputValue} />
+          </>
+        } 
+      />
+      <Route 
+        path="/temporary" 
+        element={<Temporary inputValue={inputValue} setInputValue={setInputValue} />} 
+      />
+    </Routes>
   );
 }
 

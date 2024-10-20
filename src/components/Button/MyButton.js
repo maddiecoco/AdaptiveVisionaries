@@ -1,7 +1,15 @@
 import React from 'react';
-import './MyButton.css'
+import './MyButton.css';
+import { useNavigate } from 'react-router-dom'; 
 
 function MyButton({ inputValue, setInputValue }) {
+  const navigate = useNavigate(); 
+
+
+  const handleNavigate = () => {
+    navigate('/temporary'); // Navigate to the Temporary component
+  };
+
   const handleButtonClick = (char) => {
     setInputValue((prev) => prev + char); // Append the clicked letter to the input value
   };
@@ -64,6 +72,10 @@ function MyButton({ inputValue, setInputValue }) {
           Delete
         </button>
 
+        {/* Navigate to Temporary Button */}
+        <button className="my-button navigate-button" onClick={handleNavigate}>
+          Extra Words
+        </button>
       </div>
     </div>
   );
