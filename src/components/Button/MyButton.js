@@ -18,6 +18,10 @@ function MyButton({ inputValue, setInputValue }) {
     setInputValue((prev) => prev.slice(0, -1)); // Remove the last character from the input value
   };
 
+  const handleClear = () => {
+    setInputValue(''); // Clear the input field
+  };
+
   // Create an array of numbers, punctuation, and letters
   const numbers = Array.from({ length: 10 }, (_, index) => index.toString());
   const alphabet = Array.from({ length: 26 }, (_, index) => String.fromCharCode(65 + index));
@@ -70,6 +74,10 @@ function MyButton({ inputValue, setInputValue }) {
         {/* Delete Button */}
         <button className="my-button" onClick={handleDelete}>
           Delete
+        </button>
+
+        <button className="my-button" onClick={handleClear}>
+          Clear
         </button>
 
         {/* Navigate to Temporary Button */}
