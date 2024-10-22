@@ -36,9 +36,14 @@ const Temporary = ({ inputValue, setInputValue }) => {
 
   return (
     <div className="container">
-      <p>Current input: {inputValue}</p>
+      <input
+        type="text"
+        value={inputValue}
+        placeholder="Type here..."
+        readOnly // Prevent user from typing manually
+      />
 
-      <div className="button-container">
+      <div className="button-container-1">
         {/* Dynamically generate buttons for each phrase */}
         {phrases.map((phrase, index) => (
           <button key={index} className="my-button" onClick={() => handlePhraseClick(phrase)}>
