@@ -47,6 +47,6 @@ const TextToSpeech = ({ text }) => {
       <button className="sound-button" onClick={handleStop}>Stop</button>
     </div>
   );
-};
+};  
 
 export default TextToSpeech;
