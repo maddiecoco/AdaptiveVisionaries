@@ -1,5 +1,22 @@
 {
-  "name": "enabling",
+  "name": "main",
+  "build": {
+    "appId": "com.eyegaze.app",
+    "productName": "Eye Gaze AAC",
+    "win": {
+      "target": ["nsis"]
+    },
+    "extraMetadata": {
+      "main": "electron.js"
+    },
+    "files": [
+    "build/**/*",
+    "electron.js"
+  ],
+    "directories":{
+      "output": "dist"
+    }
+  },
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -12,15 +29,15 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
-  "main": "main.js",
+  "main": "electron.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "electron": "electron .",
-    "package": "electron-packager . enabling --platform=win32 --arch=x64 --out=",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
+  "start": "react-scripts start",
+  "build": "react-scripts build && electron-builder",
+  "electron": "electron .",
+  "package": "electron-packager . enabling --platform=win32 --arch=x64 --out=dist",
+  "test": "react-scripts test",
+  "eject": "react-scripts eject"
+},
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -40,7 +57,9 @@
     ]
   },
   "devDependencies": {
+    "@electron-forge/cli": "^7.5.0",
     "electron": "^33.0.2",
+    "electron-builder": "^25.1.8",
     "electron-packager": "^17.1.2"
   }
 }

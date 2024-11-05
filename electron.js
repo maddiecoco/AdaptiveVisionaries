@@ -11,7 +11,7 @@ function createWindow() {
         },
     });
 
-    win.loadURL(`file://${path.join(__dirname, 'build', 'index.html')}`);
+    win.loadURL(`file://${path.join(__dirname, 'build', 'index.html').replace(/\\/g, '/')}`);
 }
 
 app.whenReady().then(createWindow);
