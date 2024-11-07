@@ -1,11 +1,21 @@
 /* BottomNav.css */
+
+:root {
+  /* Define color palette */
+  --bottom-bar-background: #cfc4fa;         
+}
+
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
   }
   
   .navbar {
+<<<<<<< HEAD:src/components/NavBar/TopBar.css
     background-color: #e7cbef;
+=======
+    background-color: var(--bottom-bar-background);
+>>>>>>> f9cf1da (purple wooooooo):src/components/NavBar/BottomBar.css
     position: fixed;
     top: 20px; /* Adjusts how far below the top it floats */
     left: 50%;
@@ -13,6 +23,7 @@ body {
     width: 90%; /* Controls the width */
     padding: 20px 0; /* Increases height */
     border-radius: 15px; /* Adds rounded corners */
+    border: 1.5px solid var(--secondary-color);
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); /* Creates a shadow for floating effect */
     display: flex;
     justify-content: space-around; /* Spaces out the items evenly */
@@ -27,7 +38,11 @@ body {
   }
   
   .navbar a:hover {
+<<<<<<< HEAD:src/components/NavBar/TopBar.css
     background: #c278d6; /* Changes background on hover */
+=======
+    background: #efe1f4; /* Changes background on hover */
+>>>>>>> f9cf1da (purple wooooooo):src/components/NavBar/BottomBar.css
     color: black;
     border-radius: 10px; /* Adds a slight rounding to hover state */
   }
