@@ -1,3 +1,14 @@
+
+:root {
+  /* Define color palette */
+  --primary-color: #7360A4 ;       /* this doesnt pass contrast, but #56477B does*/
+  --secondary-color: #7e60bf;     
+  --accent-color: #e4b1f0;        
+  --background-color: #f1eaff;    
+  --text-color:  #ecf0f1; 
+}
+
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +16,15 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* Apply color palette */
+  background-color: var(--background-color); /* Background color */
+  color: var(--text-color);                  /* Default text color */
 }
+
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+    color: var(--accent-color);                /* Apply accent color to code */
 }
