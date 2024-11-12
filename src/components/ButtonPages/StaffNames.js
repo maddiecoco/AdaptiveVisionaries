@@ -1,5 +1,5 @@
 import React from 'react';
-import '../HomePage/HomeButtons.css';
+import '../Button/MyButton.css';
 
 const StaffNames = ({ inputValue, setInputValue }) => {
 
