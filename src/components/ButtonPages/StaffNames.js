@@ -1,9 +1,7 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import './Button/MyButton.css'
+import '../HomePage/HomeButtons.css';
 
 const StaffNames = ({ inputValue, setInputValue }) => {
-  const navigate = useNavigate();
 
   // Array of phrases
   const phrases = [
@@ -33,15 +31,16 @@ const StaffNames = ({ inputValue, setInputValue }) => {
     setInputValue(inputValue + " " + phrase); // Append the clicked phrase to inputValue
   };
 
-  const handleNavigateBack = () => {
-    navigate('/'); // Navigate back to the home page
-  };
-
   return (
     <div className="container">
-      <p>Current input: {inputValue}</p>
+      <input
+        type="text"
+        value={inputValue}
+        placeholder="Phrase will appear here."
+        readOnly 
+      />
 
-      <div className="button-container">
+      <div className="button-container-1">
         {/* Dynamically generate buttons for each phrase */}
         {phrases.map((phrase, index) => (
           <button key={index} className="my-button" onClick={() => handlePhraseClick(phrase)}>
@@ -49,11 +48,6 @@ const StaffNames = ({ inputValue, setInputValue }) => {
           </button>
         ))}
       </div>
-
-      {/* Button to navigate back to the main page */}
-      <button className="my-button" onClick={handleNavigateBack}>
-        Back to Main Page
-      </button>
     </div>
   );
 };
