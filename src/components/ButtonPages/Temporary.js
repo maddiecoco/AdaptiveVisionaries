@@ -1,8 +1,7 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import './Button/MyButton.css'
+import '../HomePage/HomeButtons.css';
+
 const Temporary = ({ inputValue, setInputValue }) => {
-  const navigate = useNavigate();
 
   // Array of phrases
   const phrases = [
@@ -30,16 +29,12 @@ const Temporary = ({ inputValue, setInputValue }) => {
     setInputValue(inputValue + " " + phrase); // Append the clicked phrase to inputValue
   };
 
-  const handleNavigateBack = () => {
-    navigate('/'); // Navigate back to the home page
-  };
-
   return (
     <div className="container">
       <input
         type="text"
         value={inputValue}
-        placeholder="Type here..."
+        placeholder="Phrase will appear here."
         readOnly // Prevent user from typing manually
       />
 
@@ -51,11 +46,6 @@ const Temporary = ({ inputValue, setInputValue }) => {
           </button>
         ))}
       </div>
-
-      {/* Button to navigate back to the main page */}
-      <button className="my-button" onClick={handleNavigateBack}>
-        Back to Main Page
-      </button>
     </div>
   );
 };

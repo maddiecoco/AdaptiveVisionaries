@@ -1,0 +1,104 @@
+input {
+  font-size: 32px; /* Larger font size */
+  width: calc(100% - 60px); /* Full width minus 30px on each side */
+  padding: 10px; /* Add some padding */
+  margin-bottom: 10px; /* Space below the input */
+  border: 1px solid red;
+  position: fixed; /* Fix the position to the viewport */
+  bottom: 30px; /* 30px from the bottom */
+  left: 30px; /* 30px from the left */
+  right: 30px; /* 30px from the right */
+  z-index: 1000; /* Bring it to the front if needed */
+}
+
+.button-container {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr); /* 10 buttons per row */
+    gap: 10px; /* Space between buttons */
+    padding: 10px; /* Padding around the button container */
+    border:3px solid green;
+}
+
+.container {
+  margin-left: 5%;
+  margin-right: 5%;
+  border: 1px solid #007bff;
+  padding: 10px;
+}
+
+.button-container-1 {
+  position: fixed; /* Keeps container fixed on the page */
+  top: 50px; /* 50px from the top */
+  right: 20px; /* 20px from the right */
+  display: grid;
+  grid-template-columns: repeat(8, 1fr); /* 8 buttons per row */
+  gap: 10px; /* Space between buttons */
+  width: calc(8 * 120px + 7 * 10px); /* Set width to fit 8 buttons plus gaps */
+}
+
+.my-button {
+  padding: 15px;
+  border: 1px solid #7A16A2;
+  background-color: #F1D6FA;
+  color: #590F76;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  font-weight: bold;
+  width: 100%; /* Makes button fill the grid cell */
+  box-sizing: border-box;
+}
+
+.og-button-container-1 {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr); /* 8 buttons per row */
+    gap: 10px; /* Space between buttons */
+    padding: 10px; /* Padding around the button container */
+}
+
+.og-container {
+  margin-left: 5%;
+  margin-right: 5%;
+  border: 1px solid #007bff;
+}
+  
+.og-my-button {
+  padding: 15px; /* Adjust padding for larger buttons */
+  border: 1px solid #7A16A2;
+  background-color: #F1D6FA; /* Example background color */
+  color: #590F76; /* Color of the Numbers/Letters */
+  font-size: 30px; /* Adjust font size as needed */
+  cursor: pointer;
+  border-radius: 5px; /* Rounded corners for buttons */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+  font-weight: bold;
+  margin-left: 5%;
+}
+  
+  /* Color Value that appears when you hover over a*/
+  .my-button:hover {
+    background-color: #de96e0; /* Darker shade on hover */
+  }
+
+  /* Wider space button */
+.space-button {
+    grid-column: span 2; /* Make the space button span two columns */
+    font-weight: bold;
+  }
+
+  /* TextToSpeech.css */
+.textarea {
+    font-size: 16px;
+    width: 100%;
+    padding: 10px;
+    margin-left: 5%;
+    margin-right: 10px;
+  }
+  
+  .sound-button {
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 5px;
+  }
+  

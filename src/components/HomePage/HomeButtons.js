@@ -1,14 +1,7 @@
 import React from 'react';
-import './MyButton.css';
-import { useNavigate } from 'react-router-dom'; 
+import './HomeButtons.css';
 
-function MyButton({ inputValue, setInputValue }) {
-  const navigate = useNavigate(); 
-
-
-  const handleNavigate = () => {
-    navigate('/temporary'); // Navigate to the Temporary component
-  };
+function HomeButtons({ inputValue, setInputValue }) {
 
   const handleButtonClick = (char) => {
     setInputValue((prev) => prev + char); // Append the clicked letter to the input value
@@ -33,7 +26,7 @@ function MyButton({ inputValue, setInputValue }) {
         type="text"
         value={inputValue}
         readOnly // Prevent user from typing manually
-        placeholder="Type here..."
+        placeholder="Phrase will appear here."
       />
       <div className="button-container">
         {/* Numbers 0-9 */}
@@ -60,16 +53,18 @@ function MyButton({ inputValue, setInputValue }) {
 
         {/* Alphabet A-Z */}
         {alphabet.map((char) => (
-          <button
+          <button className="my-button"
             key={char}
-            className="my-button"
             onClick={() => handleButtonClick(char)}
           >
             {char}
           </button>
         ))}
+        
         {/* Wider Space Button */}
-        <button className="my-button space-button" onClick={() => handleButtonClick(' ')}>Space</button>
+        <button className="my-button space-button" onClick={() => handleButtonClick(' ')}>
+          Space
+        </button>
         
         {/* Delete Button */}
         <button className="my-button" onClick={handleDelete}>
@@ -79,14 +74,9 @@ function MyButton({ inputValue, setInputValue }) {
         <button className="my-button" onClick={handleClear}>
           Clear
         </button>
-
-        {/* Navigate to Temporary Button */}
-        <button className="my-button navigate-button" onClick={handleNavigate}>
-          Extra Words
-        </button>
       </div>
     </div>
   );
 }
 
-export default MyButton;
+export default HomeButtons;
