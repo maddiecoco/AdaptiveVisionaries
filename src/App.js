@@ -26,15 +26,30 @@ function App() {
         />
         <Route 
           path="/staffnames" 
-          element={<StaffNames inputValue={inputValue} setInputValue={setInputValue} />} 
+          element={
+            <>
+              <StaffNames inputValue={inputValue} setInputValue={setInputValue} />
+              <TextToSpeech text={inputValue} />
+            </>
+          } 
         />
         <Route 
           path="/daymonths" 
-          element={<DayMonths inputValue={inputValue} setInputValue={setInputValue} />} 
+          element={
+            <>
+              <DayMonths inputValue={inputValue} setInputValue={setInputValue} />
+              <TextToSpeech text={inputValue} />
+            </>
+          } 
         />
         <Route 
           path="/temporary" 
-          element={<Temporary inputValue={inputValue} setInputValue={setInputValue} />} 
+          element={
+            <>
+              <Temporary inputValue={inputValue} setInputValue={setInputValue} />
+              <TextToSpeech text={inputValue} />
+            </>
+          } 
         />
       </Routes>    </>
   );

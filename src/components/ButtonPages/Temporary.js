@@ -38,7 +38,7 @@ const Temporary = ({ inputValue, setInputValue }) => {
         readOnly // Prevent user from typing manually
       />
 
-      <div className="button-container-1">
+      <div className="button-container-2">
         {/* Dynamically generate buttons for each phrase */}
         {phrases.map((phrase, index) => (
           <button key={index} className="my-button" onClick={() => handlePhraseClick(phrase)}>
