@@ -26,7 +26,7 @@ const TextToSpeech = ({ text }) => {
   };
 
   return (
-    <div className="container">
+    <div className="voice-container">
       <button className="speech-buttons" onClick={handlePlay}>Play</button>
       <button className="speech-buttons" onClick={handleStop}>Stop</button>
     </div>
