@@ -4,20 +4,37 @@ import '../Button/MyButton.css';
 const DayMonths = ({ inputValue, setInputValue }) => {
 
   // Array of phrases
-  const phrases = [
+  const days = [
     "Monday",
     "Tuesday",
     "Wednesday",
     "Thursday",
     "Friday",
     "Saturday",
-    "Sunday"
+    "Sunday",
+  // ];
+  // const months = [
+    "January",
+    "Febuary",
+    "March", 
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December"
   ];
 
   // Function to append phrases to inputValue
-  const handlePhraseClick = (phrase) => {
-    setInputValue(inputValue + " " + phrase); // Append the clicked phrase to inputValue
+  const handlePhraseClick = (days) => {
+    setInputValue(inputValue + " " + days); // Append the clicked phrase to inputValue
   };
+  // const handlePhraseClickMonths = (moths) => {
+  //   setInputValue(inputValue + " " + days); // Append the clicked phrase to inputValue
+  // };
 
   return (
     <div className="container">
@@ -27,14 +44,15 @@ const DayMonths = ({ inputValue, setInputValue }) => {
         placeholder="Phrase will appear here."
         readOnly // Prevent user from typing manually
       />
-      <div className="button-container">
+      <div className="button-container-3">
         {/* Dynamically generate buttons for each phrase */}
-        {phrases.map((phrase, index) => (
-          <button key={index} className="my-button" onClick={() => handlePhraseClick(phrase)}>
-            {phrase}
+        {days.map((days, index) => (
+          <button key={index} className="my-button" onClick={() => handlePhraseClick(days)}>
+            {days}
           </button>
         ))}
       </div>
+
     </div>
   );
 };

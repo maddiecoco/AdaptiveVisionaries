@@ -1,7 +1,7 @@
 import React from 'react';
 import '../Button/MyButton.css';
 
-const Temporary = ({ inputValue, setInputValue }) => {
+const CommonPhrases = ({ inputValue, setInputValue }) => {
 
   // Array of phrases
   const phrases = [
@@ -9,19 +9,16 @@ const Temporary = ({ inputValue, setInputValue }) => {
     "Would you please",
     "Thank you",
     "How are you?",
-    "Jerk!",
     "I don't know",
-    "Bathroom",
     "Charge my chair",
-    "Doctor",
-    "Dentist",
     "Go to my mother's",
-    "Ride",
-    "Tighten",
-    "Van",
-    "Velcro",
-    "Uncomfortable",
-    "Wheelchair"
+    "May I have two paper towels please?",
+    "Cold pack please!",
+    "Heating pad please!",
+    "Please get the nurse when I am on the mat.",
+    "Put on my mask.", 
+    "Fix my tray.",
+    "I need a boost"
   ];
 
   // Function to append phrases to inputValue
@@ -38,7 +35,7 @@ const Temporary = ({ inputValue, setInputValue }) => {
         readOnly // Prevent user from typing manually
       />
 
-      <div className="button-container-2">
+      <div className="button-container-3">
         {/* Dynamically generate buttons for each phrase */}
         {phrases.map((phrase, index) => (
           <button key={index} className="my-button" onClick={() => handlePhraseClick(phrase)}>
@@ -50,4 +47,4 @@ const Temporary = ({ inputValue, setInputValue }) => {
   );
 };
 
-export default Temporary;
+export default CommonPhrases;

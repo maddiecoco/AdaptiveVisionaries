@@ -3,10 +3,12 @@ import React, { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import HomeButtons from './components/HomePage/HomeButtons';
 import TextToSpeech from './components/TextToSpeech/TextToSpeech';
-import Temporary from './components/ButtonPages/Temporary';
+import CommonPhrases from './components/ButtonPages/CommonPhrases';
+import CommonWords from './components/ButtonPages/CommonWords';
 import TopBar from './components/NavBar/TopBar';
 import StaffNames from './components/ButtonPages/StaffNames';
 import DayMonths from './components/ButtonPages/DayMonths';
+import InformationPage from './components/InformationPage/InformationPage';
 
 function App() {
   const [inputValue, setInputValue] = useState('');
@@ -25,7 +27,7 @@ function App() {
           } 
         />
         <Route 
-          path="/staffnames" 
+          path="/StaffNames" 
           element={
             <>
               <StaffNames inputValue={inputValue} setInputValue={setInputValue} />
@@ -34,7 +36,7 @@ function App() {
           } 
         />
         <Route 
-          path="/daymonths" 
+          path="/DayMonths" 
           element={
             <>
               <DayMonths inputValue={inputValue} setInputValue={setInputValue} />
@@ -43,11 +45,28 @@ function App() {
           } 
         />
         <Route 
-          path="/temporary" 
+          path="/CommonWords" 
           element={
             <>
-              <Temporary inputValue={inputValue} setInputValue={setInputValue} />
+              <CommonWords inputValue={inputValue} setInputValue={setInputValue} />
               <TextToSpeech text={inputValue} />
+            </>
+          } 
+        />
+        <Route 
+          path="/CommonPhrases" 
+          element={
+            <>
+              <CommonPhrases inputValue={inputValue} setInputValue={setInputValue} />
+              <TextToSpeech text={inputValue} />
+            </>
+          } 
+        />
+        <Route 
+          path="/Information" 
+          element={
+            <>
+              <InformationPage inputValue={inputValue} setInputValue={setInputValue} />
             </>
           } 
         />

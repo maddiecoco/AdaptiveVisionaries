@@ -7,7 +7,7 @@ body {
   .navbar {
     background-color: #e7cbef;
     position: fixed;
-    top: 20px; /* Adjusts how far below the top it floats */
+    top: 10px; /* Adjusts how far below the top it floats */
     left: 50%;
     transform: translateX(-50%);
     width: 90%; /* Controls the width */

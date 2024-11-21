@@ -4,7 +4,7 @@ import '../Button/MyButton.css';
 const StaffNames = ({ inputValue, setInputValue }) => {
 
   // Array of phrases
-  const phrases = [
+  const names = [
     "Kara", 
     "Ron",
     "Mike",
@@ -27,8 +27,8 @@ const StaffNames = ({ inputValue, setInputValue }) => {
   ];
 
   // Function to append phrases to inputValue
-  const handlePhraseClick = (phrase) => {
-    setInputValue(inputValue + " " + phrase); // Append the clicked phrase to inputValue
+  const handlePhraseClick = (names) => {
+    setInputValue(inputValue + " " + names); // Append the clicked phrase to inputValue
   };
 
   return (
@@ -42,9 +42,9 @@ const StaffNames = ({ inputValue, setInputValue }) => {
 
       <div className="button-container-1">
         {/* Dynamically generate buttons for each phrase */}
-        {phrases.map((phrase, index) => (
-          <button key={index} className="my-button" onClick={() => handlePhraseClick(phrase)}>
-            {phrase}
+        {names.map((names, index) => (
+          <button key={index} className="my-button" onClick={() => handlePhraseClick(names)}>
+            {names}
           </button>
         ))}
       </div>
