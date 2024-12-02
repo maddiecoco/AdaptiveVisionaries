@@ -1,23 +1,13 @@
 import React from 'react';
+import './InformationPage.css';
 
 const InformationPage = () => {
     return (
-        <div
-            style={{
-                fontFamily: 'Arial, sans-serif',
-                padding: '20px',
-                marginTop: '80px',
-            }}
-        >
+        <div className="information-page">
             <h1>Information</h1>
-            <div
-                style={{
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                }}
-            >
+            <div className="columns-container">
                 {/* Left Column */}
-                <div style={{ width: '48%' }}>
+                <div className="column">
                     <section>
                         <h2>My Address</h2>
                         <p>Greenwich Street, #2 Wochester, MA 02122</p>
@@ -51,11 +41,11 @@ const InformationPage = () => {
                 </div>
 
                 {/* Right Column */}
-                <div style={{ width: '48%' }}>
+                <div className="column">
                     <section>
-                        <h2>Margret McKenna</h2>
-                        <p>Address: xx Newton Street, Boston, MA 02118</p>
-                        <p>Phone: xxx-xxx-7062</p>
+                        <h2>Doctor Name Currently Unknown</h2>
+                        <p>Address: xxxx</p>
+                        <p>Phone: xxx-xxx-xxxx</p>
                     </section>
                     <hr />
                     <section>
@@ -66,6 +56,13 @@ const InformationPage = () => {
                             <strong>Wheelchair Ramp:</strong> Back of the
                             building off Father Francis Gilday St.
                         </p>
+                    </section>
+                    <hr />
+                    <section>
+                        <h2>Family</h2>
+                        <p>Anna: 857-544-3350</p>
+                        <p>Linda: 617-838-3019</p>
+                        <p>Mary: 617-682-6421</p>
                     </section>
                     <hr />
                 </div>

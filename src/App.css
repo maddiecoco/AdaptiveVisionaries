@@ -1,7 +1,50 @@
+:root {
+  /* Define color palette */
+  --dark-purple: #580d8e;       
+  --darker-purple: #8c1bbc;     
+  --accent-color: #DDA0DD;        
+  --soft-lavender: #c5b6e3;   
+}
+* {
+  box-sizing: border-box;
+}
+
 body {
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+  width: 100%;
+  background-color: #8A2BE2; /* Deep purple */
+  overflow: auto;
+}
+
+.navbar a {
+  float: left;
+  /* padding: 12px; */
+  color: #f4f0f5; /* Light lavender */
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: bold;
+  width: 14.2857143%; /* Four links of equal widths */
+  text-align: center;
+  line-height: 100px; /* Center text vertically within the 30px height */
+}
+
+.navbar a:hover {
+  background-color: #af2dc6; /* Pale plum */
+  /* color: var(--dark-purple); Indigo for contrast */
+}
+
+.navbar a.active {
+  background-color: #6710CB; /* Blue-violet */
+}
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
 }

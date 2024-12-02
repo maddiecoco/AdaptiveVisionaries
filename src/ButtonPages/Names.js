@@ -1,7 +1,8 @@
 import React from 'react';
-import '../Button/MyButton.css';
+import TextToSpeech from '../TextToSpeech/TextToSpeech';
+import './ButtonPage.css';
 
-const StaffNames = ({ inputValue, setInputValue }) => {
+const Names = ({ inputValue, setInputValue }) => {
 
   // Array of phrases
   const names = [
@@ -23,7 +24,16 @@ const StaffNames = ({ inputValue, setInputValue }) => {
     "John",
     "Crystal",
     "Gigi",
-    "Biby"
+    "Biby", 
+    "Anna", 
+    "Betty",
+    "Judy", 
+    "Linda", 
+    "Mary", 
+    "Emma", 
+    "Kayla", 
+    "Ryan", 
+    "Rick"
   ];
 
   // Function to append phrases to inputValue
@@ -39,7 +49,6 @@ const StaffNames = ({ inputValue, setInputValue }) => {
         placeholder="Phrase will appear here."
         readOnly 
       />
-
       <div className="button-container-1">
         {/* Dynamically generate buttons for each phrase */}
         {names.map((names, index) => (
@@ -48,8 +57,9 @@ const StaffNames = ({ inputValue, setInputValue }) => {
           </button>
         ))}
       </div>
+      <TextToSpeech text={inputValue} setInputValue={setInputValue} />
     </div>
   );
 };
 
-export default StaffNames;
+export default Names;

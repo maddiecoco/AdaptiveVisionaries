@@ -1,31 +1,21 @@
 import React from 'react';
-import '../Button/MyButton.css';
+import TextToSpeech from '../TextToSpeech/TextToSpeech';
+import './ButtonPage.css';
 
-const DayMonths = ({ inputValue, setInputValue }) => {
+const Holidays = ({ inputValue, setInputValue }) => {
 
   // Array of phrases
-  const days = [
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-    "Sunday",
-  // ];
-  // const months = [
-    "January",
-    "Febuary",
-    "March", 
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December"
+  const holidays = [
+    "Birthday",
+    "New Year",
+    "Valendtine's Day",
+    "St.Patrick's Day",
+    "Easter",
+    "Fourth of July",
+    "Labor Day",
+    "Halloween",
+    "Thanksgiving",
+    "Christmas"
   ];
 
   // Function to append phrases to inputValue
@@ -46,15 +36,15 @@ const DayMonths = ({ inputValue, setInputValue }) => {
       />
       <div className="button-container-3">
         {/* Dynamically generate buttons for each phrase */}
-        {days.map((days, index) => (
-          <button key={index} className="my-button" onClick={() => handlePhraseClick(days)}>
-            {days}
+        {holidays.map((holidays, index) => (
+          <button key={index} className="my-button" onClick={() => handlePhraseClick(holidays)}>
+            {holidays}
           </button>
         ))}
       </div>
-
+      <TextToSpeech text={inputValue} setInputValue={setInputValue} />
     </div>
   );
 };
 
-export default DayMonths;
+export default Holidays;
