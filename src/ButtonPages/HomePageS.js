@@ -1,7 +1,8 @@
 import React from 'react';
-import './HomeButtons.css';
+import './ButtonPage.css';
+import TextToSpeech from '../TextToSpeech/TextToSpeech';
 
-function HomeButtons({ inputValue, setInputValue }) {
+function HomePageS({ inputValue, setInputValue }) {
 
   const handleButtonClick = (char) => {
     setInputValue((prev) => prev + char); // Append the clicked letter to the input value
@@ -9,10 +10,6 @@ function HomeButtons({ inputValue, setInputValue }) {
 
   const handleDelete = () => {
     setInputValue((prev) => prev.slice(0, -1)); // Remove the last character from the input value
-  };
-
-  const handleClear = () => {
-    setInputValue(''); // Clear the input field
   };
 
   // Create an array of numbers, punctuation, and letters
@@ -70,13 +67,10 @@ function HomeButtons({ inputValue, setInputValue }) {
         <button className="my-button" onClick={handleDelete}>
           Delete
         </button>
-
-        <button className="my-button" onClick={handleClear}>
-          Clear
-        </button>
       </div>
+      <TextToSpeech text={inputValue} setInputValue={setInputValue} />
     </div>
   );
 }
 
-export default HomeButtons;
+export default HomePageS;

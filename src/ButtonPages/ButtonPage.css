@@ -1,0 +1,82 @@
+/* COLORS */
+:root {
+  /* Define color palette */
+  --primary-color: #6A0DAD;       /* Deep purple */
+  --secondary-color: #8A2BE2;     /* Blue-violet */
+  --accent-color: #DDA0DD;        /* Pale plum */
+  --soft-lavender: #F1EAFF;    /* Soft lavender background */
+  --light-lavender: #F5E6FF;          /* Light lavender for text */
+}
+
+/* CONTAINERS */
+.container {
+  margin-left: 5%;
+  margin-right: 5%;
+  display: flex;
+  position: fixed;
+  left: 10px;
+  top: 145px;
+}
+
+/* CONTAINERS */
+.button-container, 
+.button-container-1, 
+.button-container-2, 
+.button-container-3 {
+  display: grid;
+  gap: 10px;  /* Space between buttons */
+  flex-grow: 1;
+  width: 100%; /* Make all containers the same width */
+}
+
+/* Specific number of buttons per row */
+.button-container {
+  grid-template-columns: repeat(10, 1fr); /* 10 buttons per row */
+}
+
+.button-container-1 {
+  grid-template-columns: repeat(8, 1fr); /* 8 buttons per row */
+}
+
+.button-container-2 {
+  grid-template-columns: repeat(4, 1fr); /* 4 buttons per row */
+}
+
+.button-container-3 {
+  grid-template-columns: repeat(6, 1fr); /* 6 buttons per row */
+}
+
+
+/* BUTTON STYLING */
+.my-button {
+  padding: 15px; /* Adjust padding for larger buttons */
+  border: 2px solid var(--secondary-color); /* Blue-violet border */
+  background-color: var(--soft-lavender); /* Example background color */
+  color: #590F76; /* Color of the Numbers/Letters */
+  font-size: 30px; /* Adjust font size as needed */
+  cursor: pointer;
+  border-radius: 5px; /* Rounded corners for buttons */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+  font-weight: bold;
+  box-sizing: border-box; /* Include padding/border in the width calculation */
+  }  
+
+.my-button:hover {
+  background-color: var(--accent-color); /* Pale plum on hover */
+  color: #4B0082; /* Indigo text for contrast */
+}
+
+/* INPUT WORDS */
+input {
+  font-size: 48px; /* Larger font size */
+  width: 90%; /* Set width to fit within the 5% left and right margins */
+  padding: 10px;
+  margin-bottom: 10px;
+  position: fixed; /* Fix the position to the viewport */
+  bottom: 30px;
+  z-index: 1000; /* Bring it to the front if needed */
+  background-color: var(--soft-lavender); /* Soft lavender */
+  color: var(--primary-color); /* Deep purple text */
+  border: 2px solid var(--secondary-color); /* Blue-violet border */
+  border-radius: 5px;
+}

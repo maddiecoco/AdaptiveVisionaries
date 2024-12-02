@@ -1,24 +1,29 @@
 import React from 'react';
-import '../Button/MyButton.css';
+import './ButtonPage.css';
+import TextToSpeech from '../TextToSpeech/TextToSpeech';
 
 const CommonPhrases = ({ inputValue, setInputValue }) => {
 
   // Array of phrases
   const phrases = [
     "My name is Amy Yu",
-    "Would you please",
     "Thank you",
     "How are you?",
     "I don't know",
     "Charge my chair",
+    "Would you please ",
+    "Can you ",
+    "I am ",
+    "I need to ",
+    "Where is ",
+    "Put on my mask.", 
+    "Fix my tray.",
     "Go to my mother's",
     "May I have two paper towels please?",
     "Cold pack please!",
     "Heating pad please!",
     "Please get the nurse when I am on the mat.",
-    "Put on my mask.", 
-    "Fix my tray.",
-    "I need a boost"
+    "I need a boost "
   ];
 
   // Function to append phrases to inputValue
@@ -43,6 +48,7 @@ const CommonPhrases = ({ inputValue, setInputValue }) => {
           </button>
         ))}
       </div>
+      <TextToSpeech text={inputValue} setInputValue={setInputValue} />
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import './TextToSpeech.css';
 
-const TextToSpeech = ({ text }) => {
+const TextToSpeech = ({ text, setInputValue }) => {
   const [utterance, setUtterance] = useState(null);
 
   useEffect(() => {
@@ -24,12 +24,17 @@ const TextToSpeech = ({ text }) => {
     const synth = window.speechSynthesis;
     synth.cancel();
   };
+  const handleClear = () => {
+    setInputValue(''); // Clear the input field
+  };
 
   return (
     <div className="voice-container">
       <button className="speech-buttons" onClick={handlePlay}>Play</button>
       <button className="speech-buttons" onClick={handleStop}>Stop</button>
-    </div>
+      <button className="speech-buttons" onClick={handleClear}>
+          Clear
+        </button>    </div>
   );
 };  
 

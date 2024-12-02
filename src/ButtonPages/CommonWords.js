@@ -1,10 +1,15 @@
 import React from 'react';
-import '../Button/MyButton.css';
+import TextToSpeech from '../TextToSpeech/TextToSpeech';
+import './ButtonPage.css';
 
 const CommonWords = ({ inputValue, setInputValue }) => {
 
   // Array of words
   const words = [
+    "Please",
+    "Hello",
+    "Ok",
+    "Maybe",
     "Jerk!",
     "Bathroom",
     "Doctor",
@@ -14,7 +19,10 @@ const CommonWords = ({ inputValue, setInputValue }) => {
     "Van",
     "Velcro",
     "Uncomfortable",
-    "Wheelchair"
+    "Wheelchair",
+    "Mother",
+    "Sister",
+    "You"
   ];
 
   // Function to append phrases to inputValue
@@ -39,6 +47,7 @@ const CommonWords = ({ inputValue, setInputValue }) => {
           </button>
         ))}
       </div>
+      <TextToSpeech text={inputValue} setInputValue={setInputValue} />
     </div>
   );
 };
