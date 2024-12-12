@@ -7,6 +7,8 @@ const CommonWords = ({ inputValue, setInputValue }) => {
   // Array of words
   const words = [
     "Please",
+    "Yes",
+    "No",
     "Hello",
     "Ok",
     "Maybe",
