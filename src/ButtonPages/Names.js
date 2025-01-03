@@ -1,6 +1,7 @@
 import React from 'react';
 import TextToSpeech from '../TextToSpeech/TextToSpeech';
 import './ButtonPage.css';
+import YesAndNo from '../YesAndNo/YesAndNo';
 
 const Names = ({ inputValue, setInputValue }) => {
 
@@ -57,6 +58,7 @@ const Names = ({ inputValue, setInputValue }) => {
           </button>
         ))}
       </div>
+      <YesAndNo/>
       <TextToSpeech text={inputValue} setInputValue={setInputValue} />
     </div>
   );

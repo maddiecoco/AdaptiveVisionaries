@@ -24,7 +24,7 @@
 .button-container-2, 
 .button-container-3 {
   display: grid;
-  gap: 10px;  /* Space between buttons */
+  gap: 15px;  /* Space between buttons */
   flex-grow: 1;
   width: 100%; /* Make all containers the same width */
 }

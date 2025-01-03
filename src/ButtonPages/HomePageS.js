@@ -1,6 +1,7 @@
 import React from 'react';
 import './ButtonPage.css';
 import TextToSpeech from '../TextToSpeech/TextToSpeech';
+import YesAndNo from '../YesAndNo/YesAndNo';
 
 function HomePageS({ inputValue, setInputValue }) {
 
@@ -68,6 +69,7 @@ function HomePageS({ inputValue, setInputValue }) {
           Delete
         </button>
       </div>
+      <YesAndNo/>
       <TextToSpeech text={inputValue} setInputValue={setInputValue} />
     </div>
   );

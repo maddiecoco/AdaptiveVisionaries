@@ -26,7 +26,7 @@ body {
   text-decoration: none;
   font-size: 25px;
   font-weight: bold;
-  width: 14.2857143%; /* Four links of equal widths */
+  width: 12.5%; /* Four links of equal widths */
   text-align: center;
   line-height: 100px; /* Center text vertically within the 30px height */
 }

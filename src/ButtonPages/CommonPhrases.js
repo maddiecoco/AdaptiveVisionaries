@@ -1,6 +1,7 @@
 import React from 'react';
 import './ButtonPage.css';
 import TextToSpeech from '../TextToSpeech/TextToSpeech';
+import YesAndNo from '../YesAndNo/YesAndNo';
 
 const CommonPhrases = ({ inputValue, setInputValue }) => {
 
@@ -10,20 +11,11 @@ const CommonPhrases = ({ inputValue, setInputValue }) => {
     "Thank you",
     "How are you?",
     "I don't know",
-    "Charge my chair",
     "Would you please ",
     "Can you ",
     "I am ",
     "I need to ",
-    "Where is ",
-    "Put on my mask.", 
-    "Fix my tray.",
-    "Go to my mother's",
-    "May I have two paper towels please?",
-    "Cold pack please!",
-    "Heating pad please!",
-    "Please get the nurse when I am on the mat.",
-    "I need a boost "
+    "Where is "
   ];
 
   // Function to append phrases to inputValue
@@ -48,6 +40,7 @@ const CommonPhrases = ({ inputValue, setInputValue }) => {
           </button>
         ))}
       </div>
+      <YesAndNo/>
       <TextToSpeech text={inputValue} setInputValue={setInputValue} />
     </div>
   );
